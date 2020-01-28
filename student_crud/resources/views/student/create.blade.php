@@ -9,9 +9,9 @@
         @if(count($errors) > 0)
         <div class="alert alert-danger">
             <ul>
-            @foreach($errors->all as $error)
-                <li>{{$error}}</li>
-            @endforeach
+                @foreach($errors->all() as $error)
+                    <li>{{$error}}</li>
+                @endforeach
             </ul>
         </div>
         @endif
@@ -29,7 +29,7 @@
                 <input type="text" name="last_name" class="form-control" placeholder="Enter Last Name"/>
             </div>
             <div class="form-group">
-                <input type="submit" class="btn btn-primary" />
+                <input type="submit" class="btn btn-primary" value="Add"/>
             </div>
         </form>
     </div>
